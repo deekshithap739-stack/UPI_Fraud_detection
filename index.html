@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UPI Fraud Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    .highlight-box {
+      background-color: #fff;
+      border-left: 5px solid #4CAF50;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .highlight-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>UPI Fraud Detection</h1>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('policy_page') }}">Policy</a>
+      <a href="{{ url_for('upload_page') }}">Upload Data</a>
+      <a href="{{ url_for('admin_page') }}">Admin Panel</a>
+      <a href="{{ url_for('predict_page') }}">Predict Transaction</a>
+      <a href="{{ url_for('dataset_page') }}">Sample Dataset</a>
+      <a href="{{ url_for('dashboard_page') }}">Dashboard</a>
+      <a href="{{ url_for('model_page') }}">Model Info</a>
+      <a href="{{ url_for('about_page') }}">About</a>
+      <a href="{{ url_for('contact_page') }}">Contact</a>
+      <a href="{{ url_for('feedback_page') }}">Feedback</a>
+      <a href="{{ url_for('faq_page') }}">FAQ</a>
+      <a href="{{ url_for('login_page') }}">Login / Signup</a>
+      <a href="{{ url_for('terms_page') }}">Terms & Conditions</a>
+      <a href="{{ url_for('privacy_page') }}">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Welcome to UPI Fraud Detection</h2>
+    <p>This platform helps detect fraudulent UPI transactions using machine learning. Use the navigation above to explore features like uploading data, predicting fraud, viewing model info, and more.</p>
+
+    <div class="highlight-box">
+      <h3>🔍 Smart Fraud Detection</h3>
+      <p>Our system uses machine learning to analyze transaction patterns and flag suspicious activity. Upload your dataset and see how it works!</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UPI Fraud Detection. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+

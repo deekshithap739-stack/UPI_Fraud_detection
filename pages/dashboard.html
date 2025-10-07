@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard – UPI Fraud Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <h1>UPI Fraud Detection Dashboard</h1>
+
+  <section>
+    <h3>Total Transactions: 120</h3>
+    <h3>Fraudulent Transactions: 18</h3>
+    <h3>Accuracy of Model: 95%</h3>
+  </section>
+
+  <section>
+    <h2>Coming Soon:</h2>
+    <ul>
+      <li>Interactive charts</li>
+      <li>Upload history</li>
+      <li>Prediction logs</li>
+    </ul>
+  </section>
+
+  <main>
+    <h2>Fraud Detection Overview</h2>
+    <canvas id="fraudChart" width="400" height="200"></canvas>
+  </main>
+
+  <script>
+    const ctx = document.getElementById('fraudChart').getContext('2d');
+    const fraudChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Legit', 'Fraud'],
+        datasets: [{
+          label: 'Transaction Count',
+          data: [1200, 45],
+          backgroundColor: ['#4CAF50', '#F44336']
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
